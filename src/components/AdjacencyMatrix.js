@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
+import Result from './Result'
 
 const Matrix = (props) => {
 	const inputMatrix = [];
-	const [matrix, setMatrix] = useState();
-	const [color, setColor] = useState(); 
+	const [matrix, setMatrix] = useState([]);
+	const [color, setColor] = useState([]); 
 
 	for(let i = 0; i < props.size; i++){
 		inputMatrix.push([]);
@@ -30,6 +31,17 @@ const Matrix = (props) => {
 		setMatrix(inputMatrix);
 	}
 
+	let content = (<p> </p>)
+
+  if(color.length === 0){
+  	content = (<p> </p>)
+  } else if(color.length > 3 || color.length < 3){
+  	content = (<div className='container justify-content-center'> 
+      <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> Number of Colors Must be Exactly 3</p>
+    </div>)
+  }else{
+  	content = (<Result adjacency={matrix} color={color}/>)
+  }
 
 	const elements = [];
 
@@ -69,6 +81,8 @@ const Matrix = (props) => {
 
 				<button type="submit" className="btn btn-primary"> Show Coloring Table! </button>
 			</form>
+
+			{content}
 		</div>
 	)
 };
