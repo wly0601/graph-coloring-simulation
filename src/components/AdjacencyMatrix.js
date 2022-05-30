@@ -1,43 +1,43 @@
 import React, {useState} from 'react'
 
 const Matrix = (props) => {
+	const inputMatrix = [];
+	const [matrix, setMatrix] = useState();
+	const [color, setColor] = useState(); 
 
-	var temp = [];
-	console.log(props.size, 'size nya')
 	for(let i = 0; i < props.size; i++){
-		temp.push([]);
+		inputMatrix.push([]);
 		for(let j = 0; j < props.size; j++){
-			temp[i].push(0);
+			inputMatrix[i].push(0);
 		}
 	}
 
-	const [matrix, setMatrix] = useState(temp)
-	console.log(matrix, 'masih temp engga')
-
 	function submitMatrixHandler(event){
-		setMatrix(temp);
 		event.preventDefault();
 
 		var count = 0;
 		for(let i = 0; i < props.size; i++){
 			for(let j = 0; j < props.size; j++){
-				console.log(parseInt(event.target[count].value), i,j)
-				matrix[i][j] = !isNaN(parseInt(event.target[count].value)) ? parseInt(event.target[count].value) : 0;
+				inputMatrix[i][j] = !isNaN(parseInt(event.target[count].value)) ? parseInt(event.target[count].value) : 0;
 				count++;
 			}
 		}
+
+		var colorPicker = event.target[event.target.length - 2].value.toString();
+		const colorArray = colorPicker.split(',');
 		
-		setMatrix(matrix);
-		console.log(matrix);
+		setColor(colorArray);
+		setMatrix(inputMatrix);
 	}
+
 
 	const elements = [];
 
-	for(let i = 1; i <= props.size; i++){
+	for(let i = 0; i < props.size; i++){
 		elements.push([]);
-		for(let j = 1; j <= props.size; j++){
-			elements[i-1].push(
-				<td key={`${i} ${j}`}>
+		for(let j = 0; j < props.size; j++){
+			elements[i].push(
+				<td key={`${i+1} ${j+1}`}>
 					<div className="input-group input-group-sm m-0">
   					<input type="text" placeholder={props.default} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
 					</div>
@@ -59,6 +59,14 @@ const Matrix = (props) => {
    					))}
   				</tbody>
 				</table>
+
+				<div className="input-group mb-3">
+  				<div className="input-group-prepend">
+    				<span className="input-group-text" id="inputGroup-sizing-default"> Choose 3 colors (separate it with comma ' , ').</span>
+  				</div>
+  				<input type="text" required placeholder='red,green,blue' className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
+				</div>
+
 				<button type="submit" className="btn btn-primary"> Show Coloring Table! </button>
 			</form>
 		</div>

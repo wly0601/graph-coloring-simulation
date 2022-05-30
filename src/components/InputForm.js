@@ -15,8 +15,6 @@ const InputForm = () =>{
     setEnteredSize(parseInt(matrixSize.size));
   }
 
-  console.log(enteredSize)
-
   let content = (<p> </p>)
 
   if(enteredSize === null){
