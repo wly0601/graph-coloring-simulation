@@ -69,7 +69,7 @@ const Matrix = (props) => {
    							{index}
    						</tr>
    					))}
-  				</tbody>
+  					</tbody>
 				</table>
 
 				<div className="input-group mb-3">
