@@ -1,6 +1,7 @@
 import React from 'react'
 import Check from '../utils/backtracking'
 import Result from './Result';
+import Summary from './Summary'
 
 const Color = (props) => {
   const A = props.adjacency;
@@ -16,10 +17,10 @@ const Color = (props) => {
   let stop = false;
   let history = [];
   var decision = '';
-  
+
   function coloring(node, A, C) {
     let color = 1;
-  
+
     while (color <= C.length - 1) {
       for (let i = node + 1; i < A.length; i++) {
         nodeColor[i] = 0;
@@ -32,8 +33,9 @@ const Color = (props) => {
             node: node + 1,
             nodeCheck: Check.isAdjecent(node, A),
             adjacentNode: Check.adjacentColorNode(node, A, C, nodeColor),
-            decision: decision
+            decision: decision,
           })
+
         if (node !== A.length - 1) {
           coloring(node + 1, A, C);
           if (stop === false) {
@@ -42,9 +44,9 @@ const Color = (props) => {
               history.push({
                   iter: iterations++,
                   node: node + 2,
-                  nodeCheck: Check.isAdjecent(node, A),
-                  adjacentNode: Check.adjacentColorNode(node, A, C, nodeColor),
-                  decision: decision
+                  nodeCheck: Check.isAdjecent(node+1, A),
+                  adjacentNode: Check.adjacentColorNode(node+1, A, C, nodeColor),
+                  decision: decision,
                 })
 
             } else if (nodeColor[node + 1] === 0) {
@@ -52,9 +54,9 @@ const Color = (props) => {
               history.push({
                   iter: iterations++,
                   node: node + 2,
-                  nodeCheck: Check.isAdjecent(node, A),
-                  adjacentNode: Check.adjacentColorNode(node, A, C, nodeColor),
-                  decision: decision
+                  nodeCheck: Check.isAdjecent(node+1, A),
+                  adjacentNode: Check.adjacentColorNode(node+1, A, C, nodeColor),
+                  decision: decision,
                 })
             }
           }
@@ -74,6 +76,8 @@ const Color = (props) => {
     return history;
   }
 
+  let showSummary = false
+
   let content = (<div className='container justify-content-center'> 
         <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> No Solution, Please add More Color! </p>
       </div>)
@@ -81,11 +85,13 @@ const Color = (props) => {
   const showTable = coloring(0,A,C);
 
   if(showTable !== false){
+    showSummary = true;
     content = (<Result content={showTable} />);
-  }
+  } 
 
   for(let j = 0; j < A.length; j++){
     if((Check.isAdjecent(j, A) === '' || A[j][j] === 1) && props.check === true){
+      showSummary = false;
       content = (<div className='container justify-content-center'> 
         <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> Graph Must be Connected and Not Contain Loop! </p>
       </div>)
@@ -97,6 +103,7 @@ const Color = (props) => {
   return (
     <div className='container'>
       {content}
+      {showSummary && (<Summary content={nodeColor} color={C}/>)}
     </div>
   )
 };

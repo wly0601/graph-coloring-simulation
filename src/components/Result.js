@@ -2,7 +2,7 @@ import React from 'react'
 
 const Result = (props) => {
   return (
-    <table className="table mt-5">
+    <table className="table mt-5 table-bordered">
       <thead className="thead-dark">
         <tr>
           <th scope="col"> Iterations </th>

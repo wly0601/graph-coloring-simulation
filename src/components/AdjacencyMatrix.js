@@ -64,7 +64,7 @@ const Matrix = (props) => {
     <div className='container table-flow'>	
       <h3 className='mt-5'> Success Created {props.size}x{props.size} Adjacency Matrix : </h3>
       <form onSubmit={submitMatrixHandler}>
-        <table className="table table-sm table-bordered mt-5">
+        <table className="table table-sm table-bordered table-responsive mt-5">
           <tbody>
              {elements.map((index, rowIndex = 1) => (
                <tr key={rowIndex}> 
@@ -76,7 +76,7 @@ const Matrix = (props) => {
 
         <div className="input-group mb-3">
           <div className="input-group-prepend">
-            <span className="input-group-text" id="inputGroup-sizing-default"> Choose 3 colors (separate it with comma ' , ').</span>
+            <span className="input-group-text" id="inputGroup-sizing-default"> Choose colors (separate it with comma ' , ').</span>
           </div>
           <input type="text" required placeholder='red,green,blue' className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
         </div>
