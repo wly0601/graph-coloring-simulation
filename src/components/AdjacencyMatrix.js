@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import Coloring from './Coloring'
+import 'katex/dist/katex.min.css';
+import { BlockMath } from 'react-katex';
+import RenderMatrix from './RenderMatrix'
 
 const Matrix = (props) => {
   const inputMatrix = [];
@@ -31,19 +34,24 @@ const Matrix = (props) => {
     setColor(colorArray);
     setMatrix(inputMatrix);
     setCheck(true)
+
   }
 
   let content;
+  let printMatrix = false;
+  let setLatexMatrix;
 
   if(color.length === 0){
-    content = (<p> </p>)
-  } else if(color.length <= 0){
-    content = (<div className='container justify-content-center'> 
-      <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> Number of Colors Must be Positive Integer !</p>
-    </div>)
-  }else{
-    content = (<Coloring adjacency={matrix} color={color} check={check}/>)
-  }
+      content = (<p> </p>)
+    } else if(color.length <= 0){
+      content = (<div className='container justify-content-center'> 
+        <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> Number of Colors Must be Positive Integer !</p>
+        </div>)
+      } else {
+        printMatrix = true;
+        setLatexMatrix = RenderMatrix(matrix);
+        content = (<Coloring adjacency={matrix} color={color} check={check}/>);
+    }
 
   const elements = [];
 
@@ -83,7 +91,12 @@ const Matrix = (props) => {
 
         <button type="submit" className="btn btn-primary"> Show Coloring Table! </button>
       </form>
-
+      {printMatrix === true && (
+        <div className='container mt-5'> 
+          <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> Adjacency Matrix Input : </p> 
+          <BlockMath math={"A = " + setLatexMatrix} />
+        </div>
+      )}
       {content}
     </div>
   )

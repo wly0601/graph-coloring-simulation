@@ -14,8 +14,8 @@ const Summary = (props) => {
     	<table className="table mt-4 table-bordered">
       	<thead className="thead-dark">
         	<tr>
-          	<th scope="col"> Simpul ke-</th>
-         	 	<th scope="col"> Warna Simpul </th>
+          	<th scope="col"> n-th Node </th>
+         	 	<th scope="col"> Node Color </th>
         	</tr>
       	</thead>
       	<tbody>

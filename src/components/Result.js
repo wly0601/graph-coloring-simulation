@@ -2,7 +2,9 @@ import React from 'react'
 
 const Result = (props) => {
   return (
-    <table className="table mt-5 table-bordered">
+  	<>
+  	<p style = {{fontSize : '24px', textAlign: 'center', marginTop: '40px'}}> Table of Process Coloring Graph G With Adjacency Matrix A with Backtracking Algorithm : </p>
+    <table className="table table-bordered">
       <thead className="thead-dark">
         <tr>
           <th scope="col"> Iterations </th>
@@ -25,6 +27,7 @@ const Result = (props) => {
            )})}
       </tbody>
     </table>
+    </>
   )
 };
 

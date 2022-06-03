@@ -24,14 +24,14 @@ const InputForm = () =>{
       <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> Size Must be Positive Integer!</p>
     </div>)
   }else{
-    content = (<Matrix size={enteredSize} default={0}/>)
+    content = (<Matrix size={enteredSize} default={0} />)
   }
   
 
   return (
     <div className='container-fluid m-auto'> 
     <form onSubmit={submitHandler}>
-      <div className="input-group my-2 px-auto">
+      <div className="input-group my-3 px-5">
         <div className="input-group-prepend">
           <span className="input-group-text px-4" id="inputGroup-sizing-default">Size of Matrix (n x n)</span>
         </div>

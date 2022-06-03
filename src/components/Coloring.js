@@ -100,6 +100,26 @@ const Color = (props) => {
     }
   }
 
+  stop = false;
+
+  for(let i = 0; i < A.length; i++){
+      for(let j = 0; j < A.length; j++){
+
+        if(Math.floor(A[i][j]) > 1 || Math.floor(A[i][j]) < 0){
+          showSummary = false;
+          content = (<div className='container justify-content-center'> 
+            <p style = {{fontSize : '24px', textAlign: 'center', margin: '30px'}}> Entry of Adjacency Matrix must be 0 or 1.</p>
+          </div>)
+          stop = true;
+          break;
+        };
+      }
+
+      if(stop === true){
+        break;
+      }
+    }
+
   return (
     <div className='container'>
       {content}
