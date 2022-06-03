@@ -12,7 +12,7 @@ const Navbar = () => {
       <Link to='/detail-laporan-pkl' style={{textDecoration: 'none'}}>
         <a className="nav-item nav-link" > Example </a>
       </Link>
-      <a className="nav-item nav-link" href="#"> GitHub Repository </a>
+      <a className="nav-item nav-link " href="https://github.com/wly0601/graph-coloring-simulation" style={{textDecoration: 'none'}}> GitHub Repository </a>
     </div>
   </div>
   </nav>
