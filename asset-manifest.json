@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/graph-coloring-simulation/static/css/main.87142052.css",
-    "main.js": "/graph-coloring-simulation/static/js/main.ec93d358.js",
+    "main.js": "/graph-coloring-simulation/static/js/main.54b77977.js",
     "static/js/787.e30c5d39.chunk.js": "/graph-coloring-simulation/static/js/787.e30c5d39.chunk.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/graph-coloring-simulation/static/media/KaTeX_AMS-Regular.797708391f0380251e6c.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/graph-coloring-simulation/static/media/KaTeX_Main-Regular.c13710b121e1ae9a9d2f.ttf",
@@ -36,6 +36,7 @@
     "static/media/KaTeX_Caligraphic-Bold.ttf": "/graph-coloring-simulation/static/media/KaTeX_Caligraphic-Bold.9958c13ab75e09ef7565.ttf",
     "static/media/KaTeX_SansSerif-Bold.woff": "/graph-coloring-simulation/static/media/KaTeX_SansSerif-Bold.57e9ba613f20e620836d.woff",
     "static/media/KaTeX_Caligraphic-Regular.ttf": "/graph-coloring-simulation/static/media/KaTeX_Caligraphic-Regular.f35e6d3248716f5337af.ttf",
+    "static/media/logo192.png": "/graph-coloring-simulation/static/media/logo192.26837e1e035f2faea177.png",
     "static/media/KaTeX_SansSerif-Italic.woff": "/graph-coloring-simulation/static/media/KaTeX_SansSerif-Italic.f08f621001261ee2d63e.woff",
     "static/media/KaTeX_Typewriter-Regular.woff2": "/graph-coloring-simulation/static/media/KaTeX_Typewriter-Regular.862beea11f68ccfdf48d.woff2",
     "static/media/KaTeX_SansSerif-Regular.woff": "/graph-coloring-simulation/static/media/KaTeX_SansSerif-Regular.93218b2f135e9b5506ef.woff",
@@ -62,11 +63,11 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/graph-coloring-simulation/static/media/KaTeX_Size3-Regular.943a01ec6dae1a54fa8b.woff2",
     "index.html": "/graph-coloring-simulation/index.html",
     "main.87142052.css.map": "/graph-coloring-simulation/static/css/main.87142052.css.map",
-    "main.ec93d358.js.map": "/graph-coloring-simulation/static/js/main.ec93d358.js.map",
+    "main.54b77977.js.map": "/graph-coloring-simulation/static/js/main.54b77977.js.map",
     "787.e30c5d39.chunk.js.map": "/graph-coloring-simulation/static/js/787.e30c5d39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87142052.css",
-    "static/js/main.ec93d358.js"
+    "static/js/main.54b77977.js"
   ]
 }
