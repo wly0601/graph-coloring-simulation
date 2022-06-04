@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/graph-coloring-simulation/static/css/main.87142052.css",
-    "main.js": "/graph-coloring-simulation/static/js/main.0a7beff3.js",
-    "static/js/787.9f345d11.chunk.js": "/graph-coloring-simulation/static/js/787.9f345d11.chunk.js",
+    "main.js": "/graph-coloring-simulation/static/js/main.0a30fd22.js",
+    "static/js/787.e30c5d39.chunk.js": "/graph-coloring-simulation/static/js/787.e30c5d39.chunk.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/graph-coloring-simulation/static/media/KaTeX_AMS-Regular.797708391f0380251e6c.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/graph-coloring-simulation/static/media/KaTeX_Main-Regular.c13710b121e1ae9a9d2f.ttf",
     "static/media/KaTeX_Main-Bold.ttf": "/graph-coloring-simulation/static/media/KaTeX_Main-Bold.741b6dafa705c6d25b25.ttf",
@@ -62,11 +62,11 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/graph-coloring-simulation/static/media/KaTeX_Size3-Regular.943a01ec6dae1a54fa8b.woff2",
     "index.html": "/graph-coloring-simulation/index.html",
     "main.87142052.css.map": "/graph-coloring-simulation/static/css/main.87142052.css.map",
-    "main.0a7beff3.js.map": "/graph-coloring-simulation/static/js/main.0a7beff3.js.map",
-    "787.9f345d11.chunk.js.map": "/graph-coloring-simulation/static/js/787.9f345d11.chunk.js.map"
+    "main.0a30fd22.js.map": "/graph-coloring-simulation/static/js/main.0a30fd22.js.map",
+    "787.e30c5d39.chunk.js.map": "/graph-coloring-simulation/static/js/787.e30c5d39.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87142052.css",
-    "static/js/main.0a7beff3.js"
+    "static/js/main.0a30fd22.js"
   ]
 }
